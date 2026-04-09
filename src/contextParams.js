@@ -14,6 +14,8 @@ import { useMemo } from 'react';
 // Available parameters: extend this object to add new context parameters
 const PARAM_DEFINITIONS = {
   editMode: { default: false, type: 'boolean' },
+  defaultForm: { default: "", type: "string" },
+  defaultTags: { default: "", type: "string" }
 };
 
 const parsers = {
