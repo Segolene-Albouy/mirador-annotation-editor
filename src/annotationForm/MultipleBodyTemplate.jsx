@@ -29,7 +29,12 @@ export default function MultipleBodyTemplate(
   let maeAnnotation = annotation;
 
   if (!maeAnnotation.id) {
-    const { defaultTags } = getContextParams(config);
+    let { defaultTags } = getContextParams(config);
+    // retype defaultTags to list of nonempty strings.
+    defaultTags =
+      defaultTags == null
+        ? []
+        : defaultTags.split(",").filter(x => x.trim().length>0)
     const initialTags = defaultTags.map((tag) => ({ label: tag, value: tag }));
 
     // If the annotation does not have maeData, the annotation was not created with mae
