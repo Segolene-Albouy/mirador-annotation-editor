@@ -33,8 +33,8 @@ export default function MultipleBodyTemplate(
     // retype defaultTags to list of nonempty strings.
     defaultTags =
       defaultTags == null
-        ? defaultTags = []
-        : defaultTags = defaultTags.split(",").filter(x => x.trim().length>0)
+        ? []
+        : defaultTags.split(",").filter(x => x.trim().length>0)
     const initialTags = defaultTags.map((tag) => ({ label: tag, value: tag }));
 
     // If the annotation does not have maeData, the annotation was not created with mae
