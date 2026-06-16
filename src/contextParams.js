@@ -16,6 +16,8 @@ const PARAM_DEFINITIONS = {
   defaultForm: { default: null, type: 'string' },
   defaultTags: { default: [], type: 'array' },
   editMode: { default: false, type: 'boolean' },
+  defaultForm: { default: "", type: "string" },
+  defaultTags: { default: "", type: "string" }
 };
 
 const parsers = {
